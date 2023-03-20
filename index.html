@@ -5,10 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Simple Tailwind Starter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+    <title>Fishinc</title>
   </head>
   <body>
-    <h1 class="text-4xl mb-4">Welcome</h1>
-    <p>Start building your Tailwind project</p>
+    <nav class="relative container mx-auto p-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-20">
+          <img src="img/logo.png" alt="" width="150px" />
+        </div>
+
+        <div class="hidden items-center space-x-6 font-bold text-black lg:flex">
+          <a href="/" class="hover:text-slate-400">Beranda</a>
+          <a href="#" class="hover:text-slate-400">Login</a>
+          <a
+            href="#"
+            class="px-8 py-3 font-bold text-white bg-green-500 rounded-lg hover:opacity-70"
+            >Daftar</a
+          >
+        </div>
+
+        <!--  Hamburger Menu -->
+        <button
+          id="menu-btn"
+          class="block hamburger lg:hidden focus:outline-none"
+          type="button"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!--  Mobile Menu -->
+      <div
+        id="menu"
+        class="absolute hidden p-6 rounded-lg bg-green-900 left-6 right-6 top-20 z-100"
+      >
+        <div
+          class="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm"
+        >
+          <a href="#" class="w-full text-center">Beranda</a>
+          <a href="#" class="w-full pt-6 border-t border-gray-400 text-center"
+            >Login</a
+          >
+          <a href="#" class="w-full py-3 text-center rounded-lg bg-green-500"
+            >Daftar</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="container flex flex-col-reverse mx-auto p-6 lg:flex-row">
+        <div class="flex flex-col space-y-10 mb-44 lg:mt-16 lg:w-1/2 xl:mb-52">
+          <h1
+            class="text-5xl font-bold text-center lg:text-4xl lg:max-w-md lg:text-left"
+          >
+            Fishinc
+          </h1>
+          <p
+            class="text-2xl text-center text-gray-400 lg:max-w-md lg:text-left"
+          >
+            Cari Ikan Fresh Yang Kamu Suka
+          </p>
+          <div class="mx-auto lg:mx-0">
+            <a
+              href="#"
+              class="py-5 px-10 text-xl font-bold text-white bg-green-500 rounded-lg lg:py-4 hover:opacity-70"
+              >Cari Tahu Lebih Lanjut</a
+            >
+          </div>
+        </div>
+        <div class="mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2">
+          <img src="img/banner.png" alt="" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
