@@ -1,15 +1,16 @@
-const btn = document.getElementById("menu-btn");
+const menuBtn = document.getElementById("menu-btn");
+const closeMenuBtn = document.getElementById("close-menu-btn");
 const menu = document.getElementById("menu");
 
-const input = document.getElementById("link-input");
-const linkForm = document.getElementById("link-form");
-const errMsg = document.getElementById("err-msg");
+menuBtn.addEventListener("click", openMenu);
+closeMenuBtn.addEventListener("click", closeMenu);
 
-btn.addEventListener("click", navToggle);
-linkForm.addEventListener("submit", formSubmit);
+function openMenu() {
+  menuBtn.classList.add("hidden");
+  menu.classList.remove("hidden");
+}
 
-function navToggle() {
-  btn.classList.toggle("open");
-  menu.classList.toggle("flex");
-  menu.classList.toggle("hidden");
+function closeMenu() {
+  menuBtn.classList.remove("hidden");
+  menu.classList.add("hidden");
 }
